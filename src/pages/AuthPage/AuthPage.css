@@ -1,0 +1,18 @@
+.authBanner {
+  height: 20vh;
+  background-image: url('https://i.imgur.com/1QzQutZ.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 1000px) {
+ .authBanner {
+  height: 30vh;
+  background-size: 100vh ;
+ } 
+}
+
+.authbtn {
+  margin-top: -5;
+}

@@ -8,6 +8,11 @@
   --orange: #F67F00;
   --text-light: #968c84;
   --text-dark: #615954;
+
+  --theme-white: #FAEDF0;
+  --theme-blue: #292C6D;
+  --theme-dark-blue: #161853;
+  --theme-red: #EC255A;
 }
 
 *, *:before, *:after {
@@ -21,7 +26,7 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--tan-4);
+  background-color: var(--theme-white);
   padding: 2vmin;
   height: 100vh;
 }
@@ -80,13 +85,13 @@ code {
 
 .form-container {
   padding: 3vmin;
-  background-color: var(--tan-1);
-  border: .1vmin solid var(--tan-3);
+  background-color: var(--theme-dark-blue);
+  border: .1vmin solid var(--theme-red);
   border-radius: 1vmin;
 }
 
 p.error-message {
-  color: var(--orange);
+  color: var(--theme-red);
   text-align: center;
 }
 
@@ -94,7 +99,7 @@ form {
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 1.25vmin;
-  color: var(--text-light);
+  color: var(--theme-white);
 }
 
 label {
@@ -106,7 +111,7 @@ label {
 input {
   padding: 1vmin;
   font-size: 2vmin;
-  border: .1vmin solid var(--tan-3);
+  border: .1vmin solid var(--theme-white);
   border-radius: .5vmin;
   color: var(--text-dark);
   background-image: none !important; /* prevent lastpass */
@@ -114,19 +119,19 @@ input {
 }
 
 input:focus {
-  border-color: var(--orange);
+  border-color: var(--theme-red);
 }
 
 button, a.button {
   margin: 1vmin;
   padding: 1vmin;
-  color: var(--white);
-  background-color: var(--orange);
+  color: var(--theme-blue);
+  background-color: var(--theme-red);
   font-size: 2vmin;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  border: .1vmin solid var(--tan-2);
+  border: .1vmin solid var(--theme-blue);
   border-radius: .5vmin;
   outline: none;
   cursor: pointer;
@@ -144,7 +149,7 @@ button.btn-xs {
 
 button:disabled, form:invalid button[type="submit"] {
   cursor: not-allowed;
-  background-color: var(--tan-4);
+  background-color: var(--theme-white);
 }
 
 button[type="submit"] {
