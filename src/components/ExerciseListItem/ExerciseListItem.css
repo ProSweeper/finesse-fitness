@@ -50,7 +50,7 @@
   border: solid 2px var(--theme-red);
 }
 
-.detail:hover {
+.detail:hover, .detail:active {
   background-color: var(--theme-white);
   color: var(--theme-red);
   border: solid 2px var(--theme-red);
@@ -62,10 +62,14 @@
   border: solid 2px var(--theme-blue);
 }
 
-.add:hover {
+.add:hover, .add:active {
   background-color: var(--theme-white);
   color: var(--theme-blue);
   border: solid 2px var(--theme-blue);
+}
+
+.lable {
+  font-weight: bold;
 }
 
 @media only screen 
@@ -81,7 +85,7 @@ and (max-device-width : 480px) {
  }
  .info {
   grid-column: 1 ;
-  padding: 0 0 0 1vmin;
+  padding: 0;
   margin-bottom: 0;
  }
  .buttons {
@@ -93,7 +97,7 @@ and (max-device-width : 480px) {
  }
  .info > p, h3 {
   margin-block-start: 0;
-  margin-block-end: 0;
+  margin-block-end: 1vmin;
  }
  [data-alttext] > span {
   display: none;

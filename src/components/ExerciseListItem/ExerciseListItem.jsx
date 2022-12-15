@@ -11,8 +11,8 @@ export default function ExerciseListItem({exercise}) {
     <div className='exerciseListItem'>
       <div className='info'>
         <h3>{capitalize(exercise.name)}</h3>
-        <p><span>Equipment:</span> {capitalize(exercise.equipment)}</p>
-        <p><span>Target Muscle:</span> {capitalize(exercise.target)}</p>
+        <p><span className='lable'>Equipment:</span> {capitalize(exercise.equipment)}</p>
+        <p><span className='lable'>Target Muscle:</span> {capitalize(exercise.target)}</p>
       </div>
       <div className='gif'>
         <img src={exercise.gifUrl} alt="demo gif" width={'100%'} />
