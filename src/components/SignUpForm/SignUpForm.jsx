@@ -36,6 +36,8 @@ export default class SignUpForm extends Component {
 
   render() {
     const disable = this.state.password !== this.state.confirm;
+    const setShowSignUp = this.props.setShowSignUp;
+    const showSignUp = this.props.showSignUp
     return (
       <div>
         <div className="form-container">
@@ -51,6 +53,7 @@ export default class SignUpForm extends Component {
             <button type="submit" disabled={disable}>SIGN UP</button>
           </form>
         </div>
+        <button className='authBtn' onClick={() => setShowSignUp(!showSignUp)}>{showSignUp ? 'Log In' : 'Sign Up'}</button>
         <p className="error-message">&nbsp;{this.state.error}</p>
       </div>
     );

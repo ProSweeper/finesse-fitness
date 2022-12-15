@@ -6,13 +6,21 @@
   background-repeat: no-repeat;
 }
 
-@media (min-width: 1000px) {
+@media only screen 
+and (min-device-width: 1024px) {
  .authBanner {
   height: 30vh;
   background-size: 100vh ;
  } 
+ h3 {
+  font-size: larger;
+ }
 }
 
-.authbtn {
-  margin-top: -5;
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+  h3 {
+    font-size: smaller;
+  }
 }

@@ -1,0 +1,27 @@
+.featuresContainer {
+  height: 40vh;
+  background-color: var(--theme-blue);
+  margin: 0;
+  display: grid;
+  gap: 1vmin;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+
+.featureCard {
+  width: 48vw;
+  height: 18vh;
+  background-color: var(--theme-white);
+  border: solid 1px black;
+}
+
+@media (min-width: 1024px) {
+  .featuresContainer {
+    height: 60vh;
+  }
+
+  .featureCard {
+    height: 28vh;
+  }
+}

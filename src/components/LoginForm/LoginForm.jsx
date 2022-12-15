@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
 
-export default function LoginForm({ setUser }) {
+export default function LoginForm({ setUser, setShowSignUp, showSignUp }) {
   const [credentials, setCredentials] = useState({
     email: '',
     password: ''
@@ -38,6 +38,7 @@ export default function LoginForm({ setUser }) {
           <button type="submit">LOG IN</button>
         </form>
       </div>
+      <button className='authBtn' onClick={() => setShowSignUp(!showSignUp)}>{showSignUp ? 'Log In' : 'Sign Up'}</button>
       <p className="error-message">&nbsp;{error}</p>
     </div>
   );
