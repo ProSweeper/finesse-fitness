@@ -54,7 +54,7 @@ export default class SignUpForm extends Component {
           </form>
         </div>
         <button className='authBtn' onClick={() => setShowSignUp(!showSignUp)}>{showSignUp ? 'Log In' : 'Sign Up'}</button>
-        <p className="error-message">&nbsp;{this.state.error}</p>
+        <p className="error-message" style={this.state.error.length > 1 ? {visibility: 'visible'} : {display: 'none'}}>&nbsp;{this.state.error}</p>
       </div>
     );
   }

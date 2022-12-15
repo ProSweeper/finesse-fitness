@@ -91,6 +91,14 @@ code {
   margin-right: 2vmin;
 }
 
+.navLogo {
+  height: auto;
+  width: auto;
+  max-height: 72px;
+  max-width: 250px;
+  vertical-align: middle;
+}
+
 p.error-message {
   color: var(--theme-red);
   text-align: center;

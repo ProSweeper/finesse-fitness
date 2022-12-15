@@ -39,7 +39,7 @@ export default function LoginForm({ setUser, setShowSignUp, showSignUp }) {
         </form>
       </div>
       <button className='authBtn' onClick={() => setShowSignUp(!showSignUp)}>{showSignUp ? 'Log In' : 'Sign Up'}</button>
-      <p className="error-message">&nbsp;{error}</p>
+      <p className="error-message" style={error.length > 1 ? {visibility: 'visible'} : {display: 'none'}}>&nbsp;{error}</p>
     </div>
   );
 }

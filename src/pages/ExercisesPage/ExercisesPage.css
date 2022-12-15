@@ -1,0 +1,24 @@
+.exerciseList {
+  height: 78vh;
+  overflow: auto;
+  border: solid black 2px;
+  margin: auto;
+  width: 40vw;
+}
+
+@media only screen 
+and (max-device-width : 480px) {
+  h3, p {
+    font-size: smaller;
+  }
+  .exerciseList {
+    height: 60vh;
+    width: 80vw;
+  }
+}
+
+@media only screen and (min-width:380px) and (max-width:800px) {
+  .exerciseList {
+    width: 60vw;
+  }
+}
