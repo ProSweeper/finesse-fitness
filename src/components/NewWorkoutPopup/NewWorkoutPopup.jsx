@@ -1,16 +1,31 @@
-import React from 'react';
+import { useRef } from 'react';
 import './NewWorkoutPopup.css';
+import * as workoutsAPI from '../../utilities/workout-api'
 
-export default function NewWorkoutPopup({ setPopupOn }) {
+export default function NewWorkoutPopup({ setPopupOn, user }) {
+  const nameRef = useRef();
+
+
+  async function handleSubmit(evt) {
+    evt.preventDefault();
+    workoutsAPI.create({name: nameRef.current.value, user});
+  }
+  
   return (
     <div className='popup'>
       <div className='innerPopup'>
         <h3>New Workout</h3>
-        <form>
+        <form onSubmit={handleSubmit}>
           <label htmlFor='workoutName'>Name
-            <input type='text' name='workoutName' placeholder='New Workout'/>
+            <input 
+              ref={nameRef} 
+              type='text' 
+              name='name' 
+              placeholder='New Workout'
+              required
+            />
           </label>
-          <button className='add'>Add Workout</button>
+          <button type='submit' className='add'>Add Workout</button>
         </form>
         <button className="closeBtn" onClick={() => setPopupOn(false)}>X</button>
       </div>

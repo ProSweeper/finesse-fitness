@@ -71,7 +71,7 @@ export default function App() {
                 targets = {targetRef.current}
                 />} 
               />
-              <Route path='/' element={<HomePage />} />
+              <Route path='/' element={<HomePage user={user}/>} />
               {/* redirect to /orders/new if path in address bar hasn't matched a <Route> above */}
               <Route path='/*' element={<Navigate to='/' />} />
             </Routes>
