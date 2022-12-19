@@ -24,7 +24,7 @@ export default function App() {
       setExercisesShown(exercises);
     }
     getExercises();
-  }, []);
+  }, [user]);
 
   useEffect( () => {
     equipmentRef.current = Array.from(new Set(allExercises.map((exercise, idx) => (
