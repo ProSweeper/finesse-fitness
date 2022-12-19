@@ -1,0 +1,19 @@
+.newWorkoutBtn {
+  border: solid var(--theme-blue) 1px;
+  color: var(--theme-blue);
+  margin: 1vmin;
+  padding: 1vmin;
+  width: 150px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+
+}
+
+.newWorkoutBtn:hover {
+  cursor: pointer;
+  background-color: var(--theme-blue);
+  color: var(--theme-white);
+}

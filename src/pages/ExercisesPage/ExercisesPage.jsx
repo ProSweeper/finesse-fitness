@@ -1,23 +1,36 @@
 import { useState, useRef, useEffect } from 'react';
 import * as exercisesAPI from '../../utilities/exercises-api';
 import ExerciseList from '../../components/ExerciseList/ExerciseList';
+import ExerciseFilter from '../../components/ExerciseFilter/ExerciseFilter';
 import './ExercisesPage.css';
 
-export default function ExercisesPage() {
-  const [exercisesShown, SetExercisesShown] = useState([]);
+export default function ExercisesPage({activeFilters, setActiveFilters, capitalize, allExercises, exercisesShown, setExercisesShown, bodyParts, equipment, targets}) {
   
-  // get all exercises from db, only want to happen on first render
-  useEffect(function () {
-    async function getExercises() {
-      const exercises = await exercisesAPI.getAll();
-      SetExercisesShown(exercises);
-    }
-    getExercises();
+
+  useEffect(() => {
+    setActiveFilters([...bodyParts, ...equipment, ...targets]);
   }, []);
+
+  // function updateFilters(evt) {
+  //   const cat = evt.target.textContent;
+  //   console.log( cat, activeFilters.includes(cat));
+  //   activeFilters.includes(cat) ? 
+  //   // remove from filters if true
+  //   setActiveFilters(activeFilters.filter(fil => fil !== cat))
+  //   :
+  //   // add to filters if not
+  //   setActiveFilters([...activeFilters, cat]);
+  // }
+  // useEffect(() => (console.log('hello')), [activeFilters])
+  // useEffect(() => (setExercisesShown(allExercises.filter(ex => {
+  //   activeFilters.includes(ex.target) || activeFilters.includes(ex.bodyPart) || activeFilters.includes(ex.equipment)
+  // }))),[activeFilters] )
+
   return (
     <main className="exercisePage">
-      <h1>exercises</h1>
-      <ExerciseList exercises={exercisesShown} />
+      <ExerciseFilter equipment={equipment} target={targets} bodyPart={bodyParts} />
+      <ExerciseList capitalize={capitalize} exercises={exercisesShown} />
     </main>
   );
 }
+

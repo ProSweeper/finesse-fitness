@@ -1,11 +1,6 @@
 import './ExerciseListItem.css';
 
-export default function ExerciseListItem({exercise}) {
-  function capitalize(string) {
-    const arr = string.split(' ');
-    const newArr = arr.map((word) => word = word.charAt(0).toUpperCase() + word.slice(1));
-    return newArr.join(' ');
-  }
+export default function ExerciseListItem({exercise, capitalize}) {
 
   return (
     <div className='exerciseListItem'>

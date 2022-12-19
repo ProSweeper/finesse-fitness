@@ -1,4 +1,4 @@
-const exerciseSchema = require('./exercise');
+const exerciseSchema = require('./exerciseSchema');
 
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;

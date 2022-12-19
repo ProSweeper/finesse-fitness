@@ -1,0 +1,24 @@
+.filterCategory {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+
+.exerciseFilterContainer {
+  width: 40vw;
+}
+
+.filterBtn {
+  color: var(--theme-blue);
+  border: solid 1px var(--theme-blue);
+  padding: 0.5vmin;
+  margin: 0.5vmin;
+  background-color: white;
+  border-radius: 10%;
+}
+
+.filterBtn:hover {
+  cursor: pointer;
+  color: var(--theme-white);
+  background-color: var(--theme-blue);
+}
