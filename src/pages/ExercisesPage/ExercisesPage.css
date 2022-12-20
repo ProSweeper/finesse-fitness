@@ -9,10 +9,11 @@
   border: solid black 2px;
   margin: auto;
   width: 40vw;
+  grid-row: 1 /span 2;
+  grid-column: 2;
 }
 
 .exerciseFilter {
-  height: 85vh;
   overflow: auto;
   border: solid black 2px;
   margin: auto;

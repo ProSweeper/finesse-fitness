@@ -26,14 +26,12 @@
   margin: 1vmin;
   grid-column: 1 / span 2;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .button {
   border: solid black 1px;
-  border-radius: 8%;
-  margin: 1vmin;
-  width: 45%;
+  width: 50%;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -60,6 +58,7 @@
   background-color: var(--theme-blue);
   color: var(--theme-white);
   border: solid 2px var(--theme-blue);
+  
 }
 
 .add:hover, .add:active {

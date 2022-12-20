@@ -1,0 +1,7 @@
+section {
+  border: black solid 1px;
+  width: 40vw;
+  height: 20vh;
+  margin: 0 auto;
+  overflow: auto;
+}

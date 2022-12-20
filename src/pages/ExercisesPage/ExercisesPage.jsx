@@ -1,15 +1,11 @@
 import { useState, useRef, useEffect } from 'react';
 import * as exercisesAPI from '../../utilities/exercises-api';
 import ExerciseList from '../../components/ExerciseList/ExerciseList';
+import Workouts from '../../components/Workouts/Workouts';
 import ExerciseFilter from '../../components/ExerciseFilter/ExerciseFilter';
 import './ExercisesPage.css';
 
-export default function ExercisesPage({activeFilters, setActiveFilters, capitalize, allExercises, exercisesShown, setExercisesShown, bodyParts, equipment, targets}) {
-  
-
-  useEffect(() => {
-    setActiveFilters([...bodyParts, ...equipment, ...targets]);
-  }, []);
+export default function ExercisesPage({ workouts, setWorkoutBeingEdited, workoutBeingEdited, capitalize, exercisesShown, setExercisesShown, bodyParts, equipment, targets}) {
 
   // function updateFilters(evt) {
   //   const cat = evt.target.textContent;
@@ -28,8 +24,13 @@ export default function ExercisesPage({activeFilters, setActiveFilters, capitali
 
   return (
     <main className="exercisePage">
+      <Workouts 
+        workoutBeingEdited={workoutBeingEdited} 
+        setWorkoutBeingEdited={setWorkoutBeingEdited} 
+        workouts={workouts}
+      />
+      <ExerciseList workoutBeingEdited={workoutBeingEdited} capitalize={capitalize} exercises={exercisesShown} />
       <ExerciseFilter equipment={equipment} target={targets} bodyPart={bodyParts} />
-      <ExerciseList capitalize={capitalize} exercises={exercisesShown} />
     </main>
   );
 }

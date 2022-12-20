@@ -2,7 +2,7 @@ import { useState } from 'react';
 import NewWorkoutPopup from '../../components/NewWorkoutPopup/NewWorkoutPopup';
 require('./HomePage.css');
 
-export default function HomePage({ user }) {
+export default function HomePage({ workouts, user, setWorkoutBeingEdited, setWorkouts }) {
   const [popupOn, setPopupOn] = useState(false);
   
   return (
@@ -13,7 +13,16 @@ export default function HomePage({ user }) {
       onClick={() => setPopupOn(true)}>
         New Workout
     </div>
-    {popupOn ? <NewWorkoutPopup setPopupOn={setPopupOn} user={user}/> : ''}
+    {popupOn ? <NewWorkoutPopup 
+      setWorkoutBeingEdited={setWorkoutBeingEdited} 
+      setPopupOn={setPopupOn} 
+      setWorkouts={setWorkouts}
+      user={user}
+      workouts={workouts}
+      /> 
+      : 
+      ''
+    }
     </>
   );
 }

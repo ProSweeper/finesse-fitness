@@ -7,12 +7,14 @@ import ExercisesPage from '../ExercisesPage/ExercisesPage';
 import HomePage from '../HomePage/HomePage';
 import NavBar from '../../components/NavBar/NavBar';
 import * as exercisesAPI from '../../utilities/exercises-api';
-
+import * as workoutAPI from '../../utilities/workout-api';
 export default function App() {
   const [user, setUser] = useState(getUser());
   const [allExercises, setAllExercises] = useState([]);
   const [exercisesShown, setExercisesShown] = useState([]);
+  const [workoutBeingEdited, setWorkoutBeingEdited] = useState('');
   const [activeFilters, setActiveFilters] = useState([]);
+  const [workouts, setWorkouts] = useState([]);
   const equipmentRef = useRef([]);
   const targetRef = useRef([]);
   const bodyPartRef = useRef([]);
@@ -23,7 +25,12 @@ export default function App() {
       setAllExercises(exercises);
       setExercisesShown(exercises);
     }
+    async function getWorkouts() {
+      const allWorkouts = await workoutAPI.getAll();
+      setWorkouts (allWorkouts);
+    }
     getExercises();
+    getWorkouts();
   }, [user]);
 
   useEffect( () => {
@@ -37,14 +44,8 @@ export default function App() {
     bodyPartRef.current = Array.from(new Set(allExercises.map((exercise, idx) => (
       `${exercise.bodyPart}`
     ))));
+    setActiveFilters([...bodyPartRef.current, ...equipmentRef.current, ...targetRef.current]);
   }, [allExercises]);
-
-  // const [activeFilters, setActiveFilters] = useState([]);
-
-  // useEffect(() => {
-  //   setActiveFilters([...bodyPartRef, ...equipmentRef, ...targetRef]);
-  //   console.log(activeFilters);
-  // }, []);
   
   function capitalize(string) {
     const arr = string.split(' ');
@@ -69,9 +70,18 @@ export default function App() {
                 equipment = {equipmentRef.current}
                 bodyParts = {bodyPartRef.current}
                 targets = {targetRef.current}
+                setWorkoutBeingEdited={setWorkoutBeingEdited}
+                workoutBeingEdited={workoutBeingEdited}
+                workouts={workouts}
                 />} 
               />
-              <Route path='/' element={<HomePage user={user}/>} />
+              <Route path='/' element={<HomePage 
+                user={user} 
+                setWorkoutBeingEdited={setWorkoutBeingEdited}
+                setWorkouts={setWorkouts}
+                workouts={workouts}
+                />} 
+              />
               {/* redirect to /orders/new if path in address bar hasn't matched a <Route> above */}
               <Route path='/*' element={<Navigate to='/' />} />
             </Routes>

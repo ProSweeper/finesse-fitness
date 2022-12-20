@@ -6,6 +6,9 @@
 
 .exerciseFilterContainer {
   width: 40vw;
+  border: solid black 1px;
+  height: 58vh;
+  padding: 1vmin;
 }
 
 .filterBtn {
