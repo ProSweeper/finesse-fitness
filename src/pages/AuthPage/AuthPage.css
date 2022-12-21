@@ -6,6 +6,11 @@
   background-repeat: no-repeat;
 }
 
+header {
+  background-color: var(--theme-white);
+  margin-bottom: 3vmin;
+}
+
 @media only screen 
 and (min-device-width: 1024px) {
  .authBanner {

@@ -1,11 +1,5 @@
 /* CSS Custom Properties */
 :root {
-  --white: #FFFFFF;
-  --tan-1: #FBF9F6;
-  --tan-2: #E7E2DD;
-  --tan-3: #E2D9D1;
-  --tan-4: #D3C1AE;
-  --orange: #F67F00;
   --text-light: #968c84;
   --text-dark: #615954;
 
@@ -26,7 +20,7 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--theme-white);
+  background-color: var(--theme-dark-blue);
   height: 100vh;
 }
 
@@ -164,6 +158,14 @@ button:disabled, form:invalid button[type="submit"] {
 button[type="submit"] {
   grid-column: span 2;
   margin: 1vmin 0 0;
+}
+
+nav {
+  background-color: var(--theme-white);
+  margin-bottom: 3vmin;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 /* lock the orientation for mobile devices */

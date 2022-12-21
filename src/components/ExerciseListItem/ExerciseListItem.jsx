@@ -14,17 +14,17 @@ export default function ExerciseListItem({ setWorkouts, workouts, exercise, capi
 
   return (
     <div className='exerciseListItem'>
-      <div className='info'>
-        <h3>{(exercise.name)}</h3>
-        <p><span className='lable'>Equipment:</span> {(exercise.equipment)}</p>
-        <p><span className='lable'>Target Muscle:</span> {(exercise.target)}</p>
+      <div className='infoContainer'>
+        <div className='info'>
+          <h3>{(exercise.name)}</h3>
+          <p><span className='lable'>Equipment:</span> {(exercise.equipment)}</p>
+          <p><span className='lable'>Target Muscle:</span> {(exercise.target)}</p>
+          <p><span className='lable'>Body Part:</span> {(exercise.bodyPart)}</p>
+        </div>
+          <div className="button add" onClick={handleAdd} data-alttext="A">Add</div>
       </div>
       <div className='gif'>
         <img src={exercise.gifUrl} alt="demo gif" width={'100%'} />
-      </div>
-      <div className='buttons'>
-        <div className="button detail" data-alttext="D">Detail</div>
-        <div className="button add" onClick={handleAdd} data-alttext="A">Add</div>
       </div>
     </div>
   );

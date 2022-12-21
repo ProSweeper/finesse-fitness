@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   overflow: auto;
+  padding: 1vmin;
 }
 
 .exerciseFilterContainer {
@@ -9,6 +10,9 @@
   border: solid black 1px;
   height: 58vh;
   padding: 1vmin;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .filterBtn {

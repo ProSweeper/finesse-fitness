@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
-import { useState, useRef } from 'react';
+import { useState, } from 'react';
 import './Workouts.css';
 import * as workoutAPI from '../../utilities/workout-api'
 import Popup from '../Popup/Popup';
+
 export default function Workouts ({ allExercises, workouts, setWorkouts, workoutBeingEdited, setWorkoutBeingEdited }) {
   const [workoutBeingViewed, setWorkoutBeingViewed] = useState(null);
   const [viewWorkoutPopupOn, setViewWorkoutPopupOn] = useState(false);

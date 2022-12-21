@@ -1,19 +1,48 @@
 .featuresContainer {
   height: 40vh;
-  background-color: var(--theme-blue);
-  margin: 0;
+  width: 95vw;
+  background-color: var(--theme-dark-blue);
+  margin: auto;
   display: grid;
   gap: 1vmin;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-items: center;
+  overflow:-moz-hidden-unscrollable;
+  border: none;
 }
 
 .featureCard {
-  width: 48vw;
+  width: 45vw;
   height: 18vh;
   background-color: var(--theme-white);
-  border: solid 1px black;
+}
+
+.features {
+  width: 100%;
+  display: flex;
+  margin-top: 10vmin;
+  justify-content: space-around;
+}
+
+.featureCard h3 {
+  color: var(--theme-blue);
+}
+
+.comingSoon {
+  filter: blur(5px);
+}
+
+.featureCard h1 {
+  font-size: 3rem;
+  color: var(--theme-red);
+  border: var(--theme-red) 5px solid;
+  padding: 1vmin;
+  border-radius: 15px;
+  display: inline-block;
+  margin-top: 2vmin;
+  transform: rotate(25deg);
+  
 }
 
 @media (min-width: 1024px) {

@@ -1,14 +1,20 @@
 .exerciseListItem {
-  border: solid black 1px;
-  margin: 2vmin;
+  margin: 0.8vmin;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 3fr 1fr;
   background-color: white;
+  -moz-box-shadow: 2px 2px 3px rgb(0, 0, 0);
+  -webkit-box-shadow: 2px 2px 3px black;
+  box-shadow: 2px 2px 3px black
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .info {
-  border: solid black 1px;
   margin: 1vmin;
   display: flex;
   flex-direction: column;
@@ -17,25 +23,18 @@
 }
 
 .gif {
-  border: solid black 1px;
   margin: 1vmin;
-}
-
-.buttons {
-  border: solid black 1px;
-  margin: 1vmin;
-  grid-column: 1 / span 2;
-  display: flex;
-  justify-content: space-around;
 }
 
 .button {
-  border: solid black 1px;
-  width: 50%;
+  width: 80%;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2vmin;
+  align-self: flex-end;
+  font-size: larger;
 }
 
 .button:hover {
@@ -58,7 +57,6 @@
   background-color: var(--theme-blue);
   color: var(--theme-white);
   border: solid 2px var(--theme-blue);
-  
 }
 
 .add:hover, .add:active {

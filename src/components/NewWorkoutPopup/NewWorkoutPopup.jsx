@@ -1,20 +1,18 @@
 import { useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
 import './NewWorkoutPopup.css';
 import * as workoutsAPI from '../../utilities/workout-api'
 
 export default function NewWorkoutPopup({ setNewWorkoutPopupOn, user, setWorkoutBeingEdited, setWorkouts, workouts }) {
   const nameRef = useRef();
-  const navigate = useNavigate();
+
 
   async function handleSubmit(evt) {
     evt.preventDefault();
     const newWorkout = await workoutsAPI.create({name: nameRef.current.value, user});
     setWorkoutBeingEdited(nameRef.current.value);
     const updatedWorkouts = ([...workouts, newWorkout])
-    console.log('jsx', updatedWorkouts);
     setWorkouts(updatedWorkouts);
-    navigate('/exercises');
+    setNewWorkoutPopupOn(false);
   }
   
   return (
