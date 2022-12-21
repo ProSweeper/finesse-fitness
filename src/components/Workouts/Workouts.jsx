@@ -46,15 +46,12 @@ export default function Workouts ({ allExercises, workouts, setWorkouts, workout
     </tr>
   ));
   return (
-    <section>
-      <h1>Workouts</h1>
-      <h3> {workoutBeingEdited ? `You are Adding to ${workoutBeingEdited}` : 'Select an Exercise to Add to'}  </h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Workout</th>
-          </tr>
-        </thead>
+    <section className='workoutsContainer'>
+      <div className='workoutsHeader'>
+        <h1>Workouts</h1>
+        <h3> {workoutBeingEdited ? `You are Adding to ${workoutBeingEdited}` : 'Select an Exercise to Add to'}  </h3>
+      </div>
+      <table className='workoutsTable'>
         <tbody>
           {allWorkouts}
         </tbody>

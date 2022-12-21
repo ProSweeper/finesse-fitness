@@ -1,0 +1,10 @@
+main > h1 {
+  margin: auto;
+  color: var(--theme-red);
+}
+
+main > img {
+  width: 90%;
+  height: auto;
+  margin: auto;
+}

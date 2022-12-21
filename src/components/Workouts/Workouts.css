@@ -1,8 +1,62 @@
-section {
-  border: black solid 1px;
-  width: 40vw;
+.workoutsContainer {
+  width: 41vw;
   height: 20vh;
   margin: 0 auto;
   overflow: auto;
-  background-color: var(--theme-white);
+  border-radius: 10px;
+  background-color: white;
+  -moz-box-shadow: 2px 2px 3px rgb(0, 0, 0);
+  -webkit-box-shadow: 2px 2px 3px black;
+  box-shadow: 2px 2px 3px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.workoutsTable {
+  width: 40vw;
+  overflow: auto;
+  height: 10vh;
+}
+
+.workoutsHeader {
+  margin-top: 0;
+  background-color: var(--theme-blue);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.workoutsHeader > h1, .workoutsHeader > h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--theme-white);
+}
+
+td > div {
+  border-radius: 10px;
+  text-align: center;
+}
+
+.viewWorkout, .editWorkout {
+  color: var(--theme-blue);
+  border: solid 1px var(--theme-blue);
+}
+
+.viewWorkout:hover, .editWorkout:hover {
+  color: var(--theme-white);
+  background-color: var(--theme-blue);
+  cursor: pointer;
+}
+
+.deleteWorkout {
+  color: var(--theme-red);
+  border: solid 1px var(--theme-red);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.deleteWorkout:hover {
+  color: var(--theme-white);
+  background-color: var(--theme-red);
+  cursor: pointer;
 }

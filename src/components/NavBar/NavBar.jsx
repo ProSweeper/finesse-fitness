@@ -9,12 +9,10 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav>
-      <Link to="/"><img className='navLogo' src="https://i.imgur.com/1QzQutZ.png" alt="logo" /></Link>
-      &nbsp; | &nbsp;
-      <Link to="/exercises">View Exercises</Link>
-      &nbsp;&nbsp;
-      <span>Welcome, {user.name}</span>
-      &nbsp;&nbsp;<Link to="" onClick={handleLogOut}>Log Out</Link>
+      <Link to="/"><img className='navLogo' src="https://i.imgur.com/lVaNIbc.png" alt="logo" /></Link>
+      <Link to="/home"><span className='soon'>Coming Soon</span></Link>
+      <span>Its Time to Lift {user.name}</span>
+      <Link to="" onClick={handleLogOut}>Log Out</Link>
     </nav>
   );
 }

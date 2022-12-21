@@ -60,7 +60,7 @@ export default function App() {
             <NavBar user={user} setUser={setUser} />
             <Routes>
               {/* client-side route that renders the component instance if the path matches the url in the address bar */}
-              <Route path='/exercises' element={<ExercisesPage 
+              <Route path='/' element={<ExercisesPage 
                 user={user}
                 allExercises={allExercises}
                 exercisesShown={exercisesShown} 
@@ -77,15 +77,15 @@ export default function App() {
                 setWorkouts={setWorkouts}
                 />} 
               />
-              <Route path='/' element={<HomePage 
+              <Route path='/home' element={<HomePage 
                 user={user} 
                 setWorkoutBeingEdited={setWorkoutBeingEdited}
                 setWorkouts={setWorkouts}
                 workouts={workouts}
                 />} 
               />
-              {/* redirect to /orders/new if path in address bar hasn't matched a <Route> above */}
-              <Route path='/*' element={<Navigate to='/exercises' />} />
+              {/* redirect to / if path in address bar hasn't matched a <Route> above */}
+              <Route path='/*' element={<Navigate to='/' />} />
             </Routes>
           </>
           :

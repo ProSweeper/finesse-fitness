@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from 'react';
-import * as exercisesAPI from '../../utilities/exercises-api';
 import ExerciseList from '../../components/ExerciseList/ExerciseList';
 import Popup from '../../components/Popup/Popup';
 import Workouts from '../../components/Workouts/Workouts';

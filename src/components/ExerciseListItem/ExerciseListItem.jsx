@@ -21,7 +21,7 @@ export default function ExerciseListItem({ setWorkouts, workouts, exercise, capi
           <p><span className='lable'>Target Muscle:</span> {(exercise.target)}</p>
           <p><span className='lable'>Body Part:</span> {(exercise.bodyPart)}</p>
         </div>
-          <div className="button add" onClick={handleAdd} data-alttext="A">Add</div>
+          <div className="button add" onClick={handleAdd} data-alttext="A">Add to {workoutBeingEdited}</div>
       </div>
       <div className='gif'>
         <img src={exercise.gifUrl} alt="demo gif" width={'100%'} />

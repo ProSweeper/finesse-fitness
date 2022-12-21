@@ -7,12 +7,18 @@
 
 .exerciseFilterContainer {
   width: 40vw;
-  border: solid black 1px;
   height: 58vh;
   padding: 1vmin;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  border-radius: 10px;
+  background-color: white;
+  overflow: auto;
+  border-radius: 10px;
+  -moz-box-shadow: 2px 2px 3px rgb(0, 0, 0);
+  -webkit-box-shadow: 2px 2px 3px black;
+  box-shadow: 2px 2px 3px black;
 }
 
 .filterBtn {
@@ -20,8 +26,11 @@
   border: solid 1px var(--theme-blue);
   padding: 0.5vmin;
   margin: 0.5vmin;
-  background-color: white;
-  border-radius: 10%;
+  background-color: var(--theme-white);
+  border-radius: 10px;
+  -moz-box-shadow: 2px 2px 3px rgb(0, 0, 0);
+  -webkit-box-shadow: 2px 2px 3px black;
+  box-shadow: 2px 2px 3px black;
 }
 
 .filterBtn:hover {

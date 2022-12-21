@@ -9,18 +9,37 @@
   height: 85vh;
   justify-content: center;
   align-items: center;
-  background-color: var(--theme-blue);
+  background-color: var(--theme-white);
+}
+.exerciseListContainer {
+  height: 85vh;
+  width: 41vw;
+  overflow: auto;
+  border-radius: 10px;
+  background-color: var(--theme-white);
+  -moz-box-shadow: 2px 2px 3px rgb(0, 0, 0);
+  -webkit-box-shadow: 2px 2px 3px black;
+  box-shadow: 2px 2px 3px black;
 }
 
 .exerciseList {
-  height: 85vh;
+  height: 75vh;
   overflow: auto;
-  border: solid black 2px;
   margin: auto;
   width: 40vw;
   grid-row: 1 /span 2;
   grid-column: 2;
   background-color: var(--theme-white);
+}
+
+.listTitle {
+  background-color: var(--theme-blue);
+  height: 8vh;
+  color: var(--theme-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vmin;
 }
 
 .exerciseFilter {
@@ -39,8 +58,12 @@
   text-align: center;
   display: flex;
   justify-content: center;
+  border-radius: 10px;
   align-items: center;
   background-color: white;
+  -moz-box-shadow: 2px 2px 3px rgb(0, 0, 0);
+  -webkit-box-shadow: 2px 2px 3px black;
+  box-shadow: 2px 2px 3px black;
 }
 
 .newWorkoutBtn:hover {

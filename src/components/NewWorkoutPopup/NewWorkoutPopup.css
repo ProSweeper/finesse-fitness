@@ -4,6 +4,10 @@
   width: 100%;
   max-width: 640px;
   background-color: var(--theme-white);
+  -moz-box-shadow: 2px 2px 3px rgb(0, 0, 0);
+  -webkit-box-shadow: 2px 2px 3px black;
+  box-shadow: 2px 2px 3px black;
+  border-radius: 10px;
 }
 
 .innerPopup > form {
@@ -20,6 +24,10 @@
 
 input {
   margin-left: 2vmin;
+  border-radius: 10px;
+  -moz-box-shadow: 2px 2px 3px rgb(0, 0, 0);
+  -webkit-box-shadow: 2px 2px 3px black;
+  box-shadow: 2px 2px 3px black;
 }
 
 .closeBtn {
@@ -27,10 +35,14 @@ input {
   top: 16px;
   right: 16px;
   padding: 3px 10px;
+  
 }
 
 .add {
   margin: 0 auto;
+  -moz-box-shadow: 2px 2px 3px rgb(0, 0, 0);
+  -webkit-box-shadow: 2px 2px 3px black;
+  box-shadow: 2px 2px 3px black;
 }
 
 button {

@@ -2,12 +2,16 @@
   position: relative;
   padding: 32px;
   width: 100%;
-  /* max-width: 640px; */
+  max-width: 740px;
   background-color: var(--theme-white);
   display: flex;
   flex-direction: column;
   max-height: 80vh;
   overflow: auto;
+  -moz-box-shadow: 2px 2px 3px rgb(0, 0, 0);
+  -webkit-box-shadow: 2px 2px 3px black;
+  box-shadow: 2px 2px 3px black;
+  border-radius: 10px;
 }
 
 .innerWorkout .workoutInput {
