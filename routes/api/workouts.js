@@ -10,7 +10,10 @@ router.post('/create', workoutsCtrl.create);
 //GET /api/workouts
 router.get('/', workoutsCtrl.index);
 
-//POST /api/workout/add-exercise
+//POST /api/workouts/add-exercise
 router.put('/add-exercise', workoutsCtrl.addExercise);
+
+//DELETE /api/workouts/delete
+router.delete('/delete', workoutsCtrl.deleteWorkout);
 
 module.exports = router;

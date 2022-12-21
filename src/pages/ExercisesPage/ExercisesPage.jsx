@@ -26,7 +26,8 @@ export default function ExercisesPage({ setWorkouts, allExercises, workouts, set
     <main className="exercisePage">
       <Workouts 
         workoutBeingEdited={workoutBeingEdited} 
-        setWorkoutBeingEdited={setWorkoutBeingEdited} 
+        setWorkoutBeingEdited={setWorkoutBeingEdited}
+        setWorkouts={setWorkouts} 
         workouts={workouts}
         allExercises={allExercises}
         

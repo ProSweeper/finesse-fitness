@@ -16,5 +16,5 @@ export async function addExercise(name, workout) {
 }
 
 export async function deleteWorkout(workout) {
-  return sendRequest(`${BASE_URL}/delete`, 'DELETE', {workout})
+  return sendRequest(`${BASE_URL}/delete`, 'DELETE', {workout}); 
 }

@@ -3,7 +3,7 @@ import { useState, useRef } from 'react';
 import './Workouts.css';
 import * as workoutAPI from '../../utilities/workout-api'
 import Popup from '../Popup/Popup';
-export default function Workouts ({ allExercises, workouts, workoutBeingEdited, setWorkoutBeingEdited }) {
+export default function Workouts ({ allExercises, workouts, setWorkouts, workoutBeingEdited, setWorkoutBeingEdited }) {
   const [workoutBeingViewed, setWorkoutBeingViewed] = useState(null);
   const [viewWorkoutPopupOn, setViewWorkoutPopupOn] = useState(false);
 
@@ -13,8 +13,10 @@ export default function Workouts ({ allExercises, workouts, workoutBeingEdited, 
     setViewWorkoutPopupOn(true);
   }
 
-  async function handleDelete() {
-    const workout = await workoutAPI.deleteWorkout();
+  async function handleDelete(name) {
+    const workout = await workouts.find(wO => wO.name === name);
+    const updatedWorkouts = await workoutAPI.deleteWorkout(workout);
+    setWorkouts(updatedWorkouts);
   }
 
   const allWorkouts = workouts.map(w => (
@@ -35,7 +37,11 @@ export default function Workouts ({ allExercises, workouts, workoutBeingEdited, 
         </div>
       </td>
       <td>
-        <div onClick={handleDelete} className='deleteWorkout'>Delete</div>
+        <div 
+          onClick={() => handleDelete(w.name)} 
+          className='deleteWorkout'>
+            Delete
+        </div>
       </td>
     </tr>
   ));

@@ -5,6 +5,7 @@ module.exports = {
   create,
   index,
   addExercise,
+  deleteWorkout,
 }
 
 async function addExercise(req, res) {
@@ -28,4 +29,10 @@ async function create(req, res) {
   } catch (err) {
     res.status(400).json('Error');
   }
+}
+
+async function deleteWorkout (req, res) {
+  await Workout.findByIdAndDelete({user: req.user, _id: req.body.workout._id});
+  const workouts = await Workout.find({user: req.user});
+  res.json(workouts);
 }
