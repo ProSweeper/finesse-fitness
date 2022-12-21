@@ -73,6 +73,7 @@ export default function App() {
                 setWorkoutBeingEdited={setWorkoutBeingEdited}
                 workoutBeingEdited={workoutBeingEdited}
                 workouts={workouts}
+                setWorkouts={setWorkouts}
                 />} 
               />
               <Route path='/' element={<HomePage 

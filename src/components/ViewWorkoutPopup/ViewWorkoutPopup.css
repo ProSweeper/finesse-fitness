@@ -1,0 +1,15 @@
+.innerWorkout {
+  position: relative;
+  padding: 32px;
+  width: 100%;
+  /* max-width: 640px; */
+  background-color: var(--theme-white);
+  display: flex;
+  flex-direction: column;
+  max-height: 80vh;
+  overflow: auto;
+}
+
+.innerWorkout .workoutInput {
+  width: 100px;
+}

@@ -1,28 +1,29 @@
 import { useState } from 'react';
-import NewWorkoutPopup from '../../components/NewWorkoutPopup/NewWorkoutPopup';
+import Popup from '../../components/Popup/Popup';
 require('./HomePage.css');
 
 export default function HomePage({ workouts, user, setWorkoutBeingEdited, setWorkouts }) {
-  const [popupOn, setPopupOn] = useState(false);
+  const [newWorkoutPopupOn, setNewWorkoutPopupOn] = useState(false);
   
   return (
-    <>
-    <h1>Home</h1>
-    <div 
-      className="newWorkoutBtn" 
-      onClick={() => setPopupOn(true)}>
-        New Workout
-    </div>
-    {popupOn ? <NewWorkoutPopup 
-      setWorkoutBeingEdited={setWorkoutBeingEdited} 
-      setPopupOn={setPopupOn} 
-      setWorkouts={setWorkouts}
-      user={user}
-      workouts={workouts}
-      /> 
-      : 
-      ''
-    }
-    </>
+    <main>
+      <h1>Home</h1>
+      <div 
+        className="newWorkoutBtn" 
+        onClick={() => setNewWorkoutPopupOn(true)}>
+          New Workout
+      </div>
+      {newWorkoutPopupOn ? <Popup 
+        setWorkoutBeingEdited={setWorkoutBeingEdited} 
+        setNewWorkoutPopupOn={setNewWorkoutPopupOn} 
+        user={user}
+        setWorkouts={setWorkouts}
+        workouts={workouts}
+        window={'newWorkout'}
+        /> 
+        : 
+        ''
+      }
+    </main>
   );
 }

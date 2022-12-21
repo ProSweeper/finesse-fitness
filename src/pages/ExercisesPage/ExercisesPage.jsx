@@ -5,7 +5,7 @@ import Workouts from '../../components/Workouts/Workouts';
 import ExerciseFilter from '../../components/ExerciseFilter/ExerciseFilter';
 import './ExercisesPage.css';
 
-export default function ExercisesPage({ workouts, setWorkoutBeingEdited, workoutBeingEdited, capitalize, exercisesShown, setExercisesShown, bodyParts, equipment, targets}) {
+export default function ExercisesPage({ setWorkouts, allExercises, workouts, setWorkoutBeingEdited, workoutBeingEdited, capitalize, exercisesShown, setExercisesShown, bodyParts, equipment, targets}) {
 
   // function updateFilters(evt) {
   //   const cat = evt.target.textContent;
@@ -28,8 +28,10 @@ export default function ExercisesPage({ workouts, setWorkoutBeingEdited, workout
         workoutBeingEdited={workoutBeingEdited} 
         setWorkoutBeingEdited={setWorkoutBeingEdited} 
         workouts={workouts}
+        allExercises={allExercises}
+        
       />
-      <ExerciseList workoutBeingEdited={workoutBeingEdited} capitalize={capitalize} exercises={exercisesShown} />
+      <ExerciseList workoutBeingEdited={workoutBeingEdited} capitalize={capitalize} exercises={exercisesShown} setWorkouts={setWorkouts} workouts={workouts}/>
       <ExerciseFilter equipment={equipment} target={targets} bodyPart={bodyParts} />
     </main>
   );

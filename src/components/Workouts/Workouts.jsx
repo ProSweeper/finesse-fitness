@@ -2,24 +2,40 @@ import { useEffect } from 'react';
 import { useState, useRef } from 'react';
 import './Workouts.css';
 import * as workoutAPI from '../../utilities/workout-api'
-export default function Workouts ({ workouts, workoutBeingEdited, setWorkoutBeingEdited }) {
-  
+import Popup from '../Popup/Popup';
+export default function Workouts ({ allExercises, workouts, workoutBeingEdited, setWorkoutBeingEdited }) {
+  const [workoutBeingViewed, setWorkoutBeingViewed] = useState(null);
+  const [viewWorkoutPopupOn, setViewWorkoutPopupOn] = useState(false);
+
+  async function editWorkout(name) {
+    const workout = await workouts.find(wO => wO.name === name);
+    setWorkoutBeingViewed(workout);
+    setViewWorkoutPopupOn(true);
+  }
+
+  async function handleDelete() {
+    const workout = await workoutAPI.deleteWorkout();
+  }
+
   const allWorkouts = workouts.map(w => (
     <tr>
       <td>{w.name}</td>
       <td>
-        <div className='viewWorkout'>View</div>
+        <div 
+          onClick={() => editWorkout(w.name)}
+          className='viewWorkout'>
+            View
+        </div>
       </td>
       <td>
         <div 
           onClick={() => setWorkoutBeingEdited(w.name)} 
-          className='editWorkout'
-        >
-            Edit
+          className='editWorkout'>
+            Add to
         </div>
       </td>
       <td>
-        <div className='deleteWorkout'>Delete</div>
+        <div onClick={handleDelete} className='deleteWorkout'>Delete</div>
       </td>
     </tr>
   ));
@@ -37,6 +53,18 @@ export default function Workouts ({ workouts, workoutBeingEdited, setWorkoutBein
           {allWorkouts}
         </tbody>
       </table>
+      <div>
+        {viewWorkoutPopupOn ? <Popup 
+          window={'viewWorkout'}
+          workout={workoutBeingViewed}
+          setViewWorkoutPopupOn={setViewWorkoutPopupOn}
+          setWorkoutBeingViewed={setWorkoutBeingViewed}
+          allExercises={allExercises}
+        /> 
+        : 
+        '' 
+      }
+      </div>
     </section>
   );
 }

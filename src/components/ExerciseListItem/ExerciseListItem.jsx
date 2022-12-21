@@ -2,13 +2,14 @@ import * as workoutAPI from '../../utilities/workout-api';
 
 import './ExerciseListItem.css';
 
-export default function ExerciseListItem({exercise, capitalize, workoutBeingEdited}) {
+export default function ExerciseListItem({ setWorkouts, workouts, exercise, capitalize, workoutBeingEdited}) {
 
   async function handleAdd(evt) {
     const name = evt.target.parentNode.parentNode.firstChild.firstChild.textContent;
     const workout = workoutBeingEdited;
-    await workoutAPI.addExercise(name, workout);
-
+    const updatedWorkout = await workoutAPI.addExercise(name, workout);
+    const updatedWorkouts = workouts.map(w => w._id === updatedWorkout._id ? updatedWorkout : w);
+    setWorkouts(updatedWorkouts);
   }
 
   return (

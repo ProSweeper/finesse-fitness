@@ -16,13 +16,15 @@ async function addExercise(req, res) {
 }
 
 async function index(req, res) {
-  const workouts = await Workout.find({user: req.user});
+  const workouts = await Workout.find({user: req.user}).populate({path: 'workoutExercises', populate: {path: 'exercise', model: 'Exercise'}}).exec();
   res.json(workouts);
 }
 
 async function create(req, res) {
   try {
-    Workout.create(req.body);
+    const workout = await Workout.create(req.body);
+    res.json(workout);
+    // console.log('controller:', req.body)
   } catch (err) {
     res.status(400).json('Error');
   }
