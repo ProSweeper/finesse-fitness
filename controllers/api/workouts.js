@@ -25,7 +25,6 @@ async function create(req, res) {
   try {
     const workout = await Workout.create(req.body);
     res.json(workout);
-    // console.log('controller:', req.body)
   } catch (err) {
     res.status(400).json('Error');
   }

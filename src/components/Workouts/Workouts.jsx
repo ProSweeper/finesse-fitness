@@ -7,14 +7,6 @@ export default function Workouts ({ allExercises, workouts, setWorkouts, workout
   const [workoutBeingViewed, setWorkoutBeingViewed] = useState(null);
   const [viewWorkoutPopupOn, setViewWorkoutPopupOn] = useState(false);
 
-  // async function editWorkout(workout) {
-  //     // const thisWorkout = await workouts.find(wO => wO === workout);
-  //     setWorkoutBeingViewed(workout);
-  //     setViewWorkoutPopupOn(true);
-  //     console.log(`workout: ${workout}`);
-  //     console.log(`workoutBeingViewed: ${workoutBeingViewed}`);
-  // }
-
   async function handleDelete(name) {
     const workout = await workouts.find(wO => wO.name === name);
     const updatedWorkouts = await workoutAPI.deleteWorkout(workout);
@@ -29,8 +21,6 @@ export default function Workouts ({ allExercises, workouts, setWorkouts, workout
           onClick={() => {
             setWorkoutBeingViewed(workout);
             setViewWorkoutPopupOn(true);
-            console.log(workout);
-            console.log(`workoutBeingViewed: ${workoutBeingViewed}`);
           }}
           className='viewWorkout'>
             View

@@ -6,7 +6,7 @@ export default function ExerciseListItem({ setWorkouts, workouts, exercise, capi
 
   async function handleAdd(evt) {
     const name = evt.target.parentNode.parentNode.firstChild.firstChild.firstChild.textContent;
-    console.log(name)
+
     const workout = workoutBeingEdited;
     const updatedWorkout = await workoutAPI.addExercise(name, workout);
     const updatedWorkouts = workouts.map(w => w._id === updatedWorkout._id ? updatedWorkout : w);

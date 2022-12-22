@@ -12,9 +12,7 @@ export default function ViewWorkoutPopup({
     setWorkoutBeingViewed(null);
     setViewWorkoutPopupOn(false);
   }
-  console.log(workoutBeingViewed.name)
-  console.log(workoutBeingViewed.workoutExercises)
-  // useEffect(() => )
+
   const thisWorkoutExercises = workoutBeingViewed.workoutExercises.map((ex, idx) => (
     <WorkoutExercise allExercises={allExercises} weight={ex.weight} sets={ex.sets} reps={ex.reps} name={ex.id} key={idx} />
   ));
