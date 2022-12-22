@@ -25,7 +25,6 @@
   /> 
 
    ## Technologies Used
-  A screenshot of your app's landing page and any other screenshots of interest.
 
   ![MongoDB](https://img.shields.io/badge/-MongoDB-05122A?style=flat&logo=mongodb)
   ![Express](https://img.shields.io/badge/-Express-05122A?style=flat&logo=express)
