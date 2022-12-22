@@ -17,7 +17,9 @@ export default function ExercisesPage({
   bodyParts, 
   equipment, 
   targets,
-  user
+  user,
+  activeFilters, 
+  setActiveFilters
 }) 
 {
   const [newWorkoutPopupOn, setNewWorkoutPopupOn] = useState(false);
@@ -48,9 +50,15 @@ export default function ExercisesPage({
         : 
         ''
       }
-        <ExerciseFilter equipment={equipment} target={targets} bodyPart={bodyParts} />
+        <ExerciseFilter 
+          activeFilters={activeFilters} 
+          equipment={equipment} 
+          target={targets} 
+          bodyPart={bodyParts}  
+          setExercisesShown={setExercisesShown}
+        />
       </div>
-      <ExerciseList workoutBeingEdited={workoutBeingEdited} capitalize={capitalize} exercises={exercisesShown} setWorkouts={setWorkouts} workouts={workouts}/>
+      <ExerciseList workoutBeingEdited={workoutBeingEdited} capitalize={capitalize} exercisesShown={exercisesShown} setWorkouts={setWorkouts} workouts={workouts}/>
     </main>
   );
 }

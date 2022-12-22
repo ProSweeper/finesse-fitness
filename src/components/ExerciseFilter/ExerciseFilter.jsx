@@ -11,7 +11,6 @@ export default function ExerciseFilter({ equipment, target, bodyPart, updateFilt
     <div onClick={(e) => updateFilters(e)} key={idx} className="filterBtn">{eqp}</div>
   ));
 
-
   return (
     <section className='exerciseFilterContainer'>
       <div className="filterCategory">{equipmentFilters}</div>
