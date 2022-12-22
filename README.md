@@ -15,7 +15,7 @@
 
   ## Description
 
- Finesse Fitness is a workout tracking app that allows you to select from 1300+ exercises to keep in shape! Each exercise has an example gif to demonstrate how to perform each exercise. 
+ Finesse Fitness is a Full-Stack, full CRUD workout tracking app that allows you to select from 1300+ exercises to keep in shape! Each exercise has an example gif to demonstrate how to perform each exercise as well as details on the exercise. I find that workout apps are always missing something whether that be ease of use or actual functionality so this is the beginning of my personal solution to that. I hope you enjoy! 
 
   </div>
 
@@ -82,5 +82,9 @@
 - Track days of activity
 
 - Share and view workouts
+
+- Responsiveness to device size
+
+- Optimization
 
 - Other integrations planned
