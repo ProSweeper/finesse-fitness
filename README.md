@@ -1,70 +1,86 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div id="header" align="center">
 
-## Available Scripts
+  <img src="https://i.imgur.com/1QzQutZ.png" width="800" height="500">
 
-In the project directory, you can run:
+</div>
+  <div id="description" align="center">
 
-### `npm start`
+# Finesse Fitness
+  ### [CLICK TO DEMO](https://finesse-fitness926.herokuapp.com/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  ##### Dylan Doucet
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  [![LinkedIn Badge](https://img.shields.io/badge/-@DylanDoucet-blue?style=flat&logo=Linkedin&logoColor=black)](https://www.linkedin.com/in/dylan-doucet-064398234/)
 
-### `npm test`
+  ## Description
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ Finesse Fitness is a workout tracking app that allows you to select from 1300+ exercises to keep in shape! Each exercise has an example gif to demonstrate how to perform each exercise. 
 
-### `npm run build`
+  </div>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   <h3 align="center">Profile Page</h3>  <img
+  src="https://i.imgur.com/t8djIWE.png"
+  width="700"
+  /> 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ## Technologies Used
+  A screenshot of your app's landing page and any other screenshots of interest.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  ![MongoDB](https://img.shields.io/badge/-MongoDB-05122A?style=flat&logo=mongodb)
+  ![Express](https://img.shields.io/badge/-Express-05122A?style=flat&logo=express)
+  ![React](https://img.shields.io/badge/-React-05122A?style=flat&logo=react)
+  ![Node](https://img.shields.io/badge/-Node.js-05122A?style=flat&logo=node.js)
+  ![AWS S3](https://img.shields.io/badge/-AWS_S3-05122A?style=flat&logo=amazons3)
+  ![JWT](https://img.shields.io/badge/-JSON_Web_Tokens-05122A?style=flat&logo=jsonwebtokens)
+  ![Mongoose ODM](https://img.shields.io/badge/-Mongoose_ODM-05122A?style=flat&logo=mongodb)
+  ![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript)
+  ![HTML5](https://img.shields.io/badge/-HTML5-05122A?style=flat&logo=html5)
+  ![CSS3](https://img.shields.io/badge/-CSS-05122A?style=flat&logo=css3)
+  ![Trello](https://img.shields.io/badge/-Trello-05122A?style=flat&logo=trello)
+  ![Heroku](https://img.shields.io/badge/-Heroku-05122A?style=flat&logo=heroku)
+  ![Markdown](https://img.shields.io/badge/-Markdown-05122A?style=flat&logo=markdown)
+  ![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)
+  ![Github](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)
+  ![VSCode](https://img.shields.io/badge/-VS_Code-05122A?style=flat&logo=visualstudio)
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<details open>
+  <summary> Sign Up </summary>
+    1. Click the Heroku link and fill out the form!
+</details>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<details>
+  <summary> Create and Save a workout </summary>
+    1. Click the button and name it!
+    2. Browse through our exercise list and add them to your workout
+</details>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<details open>
+  <summary> Trello Board </summary>
+  <a href="https://trello.com/b/f7YSLLaW/finesse-fitness"
+    > https://trello.com/b/f7YSLLaW/finesse-fitness </a
+  >
+</details>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<details open>
+  <summary> Deployed Link (Heroku) </summary>
+  <a href="https://finesse-fitness926.herokuapp.com/"
+    > https://finesse-fitness926.herokuapp.com/</a
+  >
+</details>
 
-## Learn More
+## Upcoming Features
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Track individual exercises
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Filter exercises shown
 
-### Code Splitting
+- Track progress on exercises
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Track days of activity
 
-### Analyzing the Bundle Size
+- Share and view workouts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Other integrations planned
